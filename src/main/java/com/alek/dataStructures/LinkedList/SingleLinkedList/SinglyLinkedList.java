@@ -1,6 +1,6 @@
 package com.alek.dataStructures.LinkedList.SingleLinkedList;
 
-public class SingleLinkedList<E> {
+public class SinglyLinkedList<E> {
 
     private Node<E> headNode;
 
@@ -41,17 +41,20 @@ public class SingleLinkedList<E> {
         headNode = node;
     }
 
+    public Node<E> removeFromFront() {
+
+        if (isEmpty()) {
+            return null;
+        }
+
+        Node<E> removedNode = headNode;
+        headNode = headNode.nextNode;
+        removedNode.setNextNode(null);
+        return removedNode;
+    }
+
     public boolean isEmpty() {
         return headNode == null;
-    }
-
-    public boolean add(int index, E element) {
-        return false;
-    }
-
-    public E remove(int index) {
-
-        return null;
     }
 
     public int size() {
@@ -62,6 +65,15 @@ public class SingleLinkedList<E> {
             currentNode = currentNode.nextNode;
         }
         return size;
+    }
+
+    public boolean add(int index, E element) {
+        return false;
+    }
+
+    public E remove(int index) {
+
+        return null;
     }
 
 

@@ -1,6 +1,6 @@
 package com.alek;
 
-import com.alek.dataStructures.LinkedList.SingleLinkedList.SingleLinkedList;
+import com.alek.dataStructures.LinkedList.SingleLinkedList.SinglyLinkedList;
 import com.alek.dataStructures.LinkedList.SingleLinkedList.Employee;
 import com.alek.dataStructures.LinkedList.SingleLinkedList.User;
 
@@ -20,7 +20,7 @@ public class Application {
         User user4 = new User("login4", "password4");
         User user5 = new User("login5", "password5");
 
-        SingleLinkedList<Employee> employeeList = new SingleLinkedList<>();
+        SinglyLinkedList<Employee> employeeList = new SinglyLinkedList<>();
 
         employeeList.addToFront(employee1);
         employeeList.addToFront(employee2);
@@ -31,14 +31,17 @@ public class Application {
         employeeList.printList();
 
 
-        SingleLinkedList<User> userList = new SingleLinkedList<>();
+        SinglyLinkedList<User> userList = new SinglyLinkedList<>();
 
         userList.addToFront(user1);
         userList.addToFront(user2);
         userList.addToFront(user3);
         userList.addToFront(user4);
         userList.addToFront(user5);
-
+        userList.removeFromFront();
+        userList.removeFromFront();
+        userList.removeFromFront();
+        userList.removeFromFront();
 
         userList.printList();
     }
