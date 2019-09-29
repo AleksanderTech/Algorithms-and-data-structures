@@ -1,6 +1,6 @@
-package com.alek.algorithms.sorting;
+package com.alek.algorithm.sorting;
 
-public class BubbleSort {
+public class SelectionSort {
 
     public static void main(String[] args) {
 
@@ -9,20 +9,22 @@ public class BubbleSort {
 
         for (int lastIndex = array.length - 1; lastIndex > 0; lastIndex--) {
 
+            int theBiggest = 0;
 
-            for (int j = 0; j < lastIndex; j++) {
+            for (int j = 1; j <= lastIndex; j++) {
 
-                if (array[j] > array[j + 1]) {
-                    swap(array, j, j + 1);
+                if (array[j] > array[theBiggest]) {
+                    theBiggest = j;
                 }
             }
+            swap(array, lastIndex, theBiggest);
         }
 
         for (int i : array) {
             System.out.println(i);
         }
-    }
 
+    }
 
     public static void swap(int array[], int elem1, int elem2) {
 

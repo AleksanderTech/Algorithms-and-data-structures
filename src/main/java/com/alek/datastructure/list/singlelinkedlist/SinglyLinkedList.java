@@ -1,4 +1,4 @@
-package com.alek.dataStructures.LinkedList.SingleLinkedList;
+package com.alek.datastructure.list.singlelinkedlist;
 
 public class SinglyLinkedList<E> {
 

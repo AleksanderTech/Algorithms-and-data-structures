@@ -1,13 +1,13 @@
-package com.alek.dataStructures.LinkedList.SingleLinkedList;
+package com.alek.model;
 
 import java.util.Objects;
 
 public class Employee {
 
     private String name;
-    private Integer age;
+    private int age;
 
-    public Employee(String name, Integer age) {
+    public Employee(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -20,11 +20,11 @@ public class Employee {
         this.name = name;
     }
 
-    public Integer getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
