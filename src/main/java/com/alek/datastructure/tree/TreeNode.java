@@ -18,6 +18,22 @@ public class TreeNode {
         this.data = data;
     }
 
+    public TreeNode getLeftNode() {
+        return leftNode;
+    }
+
+    public void setLeftNode(TreeNode leftNode) {
+        this.leftNode = leftNode;
+    }
+
+    public TreeNode getRightNode() {
+        return rightNode;
+    }
+
+    public void setRightNode(TreeNode rightNode) {
+        this.rightNode = rightNode;
+    }
+
     public void insert(int value) {
 
         if (value == data) {
@@ -54,6 +70,7 @@ public class TreeNode {
     }
 
     public TreeNode min() {
+
         if (leftNode != null) {
             return leftNode.min();
         } else {
@@ -62,6 +79,7 @@ public class TreeNode {
     }
 
     public TreeNode max() {
+
         if (rightNode != null) {
             return rightNode.max();
         } else {
@@ -69,10 +87,25 @@ public class TreeNode {
         }
     }
 
+    public void delete(TreeNode node, int value) {
+
+        if (data == value) {
+
+
+        } else if (value < data) {
+            if (leftNode != null) {
+                leftNode.get(value);
+            }
+        } else {
+            if (rightNode != null) {
+                rightNode.get(value);
+            }
+        }
+    }
+
     public void traverseInOrder() {
 
         if (leftNode != null) {
-            System.out.println(data);
             leftNode.traverseInOrder();
         }
         System.out.println("Data: " + data + ", ");

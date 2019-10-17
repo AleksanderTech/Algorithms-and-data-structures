@@ -14,13 +14,13 @@ class TreeTest {
 
     @BeforeEach
     public void setUp() {
+
         tree = new Tree();
+        tree.insert(8);
+        tree.insert(2);
+        tree.insert(6);
         tree.insert(maximumValue);
         tree.insert(minimumValue);
-        tree.insert(2);
-        tree.insert(8);
-        tree.insert(6);
-
     }
 
     @Test
@@ -47,5 +47,12 @@ class TreeTest {
     public void max_shouldReturnMaximumValue() {
 
         assertEquals(maximumValue, tree.max().getData());
+    }
+
+    @Test
+    public void delete_shouldDeleteExistingValue() {
+
+        tree.delete(9);
+        assertEquals(null, tree.get(9));
     }
 }
