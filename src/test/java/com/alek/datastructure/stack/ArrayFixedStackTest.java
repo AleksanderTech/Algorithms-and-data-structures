@@ -6,48 +6,48 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class StackTest {
+public class ArrayFixedStackTest {
 
-    private Stack stack;
+    private ArrayFixedStack arrayFixedStack;
 
     @BeforeEach
     public void setUp() {
-        stack = new Stack(5);
-        stack.push(1);
+        arrayFixedStack = new ArrayFixedStack(5);
+        arrayFixedStack.push(1);
     }
 
     @Test
     public void peek_shouldGetTopElement_whenElementExistsInStack() {
 
-        assertEquals(1, stack.peek());
+        assertEquals(1, arrayFixedStack.peek());
     }
 
     @Test
     public void peek_shouldThrowRuntimeException_whenElementDoesNotExistInStack() {
 
-        assertThrows(RuntimeException.class, () -> stack.peek());
+        assertThrows(RuntimeException.class, () -> arrayFixedStack.peek());
     }
 
     @Test
     public void push_shouldAddItem_whenStackIsNotFull() {
 
-        stack.push(2);
-        assertEquals(2, stack.peek());
+        arrayFixedStack.push(2);
+        assertEquals(2, arrayFixedStack.peek());
     }
 
     @Test
     public void push_shouldThrowRuntimeException_whenStackIsFull() {
 
-        Stack stack = new Stack(1);
-        stack.push(1);
-        assertThrows(RuntimeException.class, () -> stack.push(2));
+        ArrayFixedStack arrayFixedStack = new ArrayFixedStack(1);
+        arrayFixedStack.push(1);
+        assertThrows(RuntimeException.class, () -> arrayFixedStack.push(2));
     }
 
     @Test
     public void pop_shouldRemoveItem_whenStackIsNotEmpty() {
 
-        stack.push(2);
-        stack.pop();
-        assertEquals(1, stack.peek());
+        arrayFixedStack.push(2);
+        arrayFixedStack.pop();
+        assertEquals(1, arrayFixedStack.peek());
     }
 }

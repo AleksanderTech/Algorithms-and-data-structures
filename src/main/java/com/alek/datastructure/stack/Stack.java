@@ -1,49 +1,16 @@
 package com.alek.datastructure.stack;
 
-public class Stack {
+public interface Stack<T> {
 
-    private int top;
-    private int capacity;
-    private int[] array;
+    T pop();
 
-    public Stack(int capacity) {
-        this.capacity = capacity;
-        this.array = new int[capacity];
-        this.top = -1;
-    }
+    T peek();
 
-    public void push(int item) {
+    void push(T item);
 
-        top++;
-        if (isFull()) {
-            throw new RuntimeException("Stack is full");
-        }
-        array[top] = item;
-    }
+    boolean isFull();
 
-    public int pop() {
+    boolean isEmpty();
 
-        if (isEmpty()) {
-            throw new RuntimeException("Stack is empty");
-        }
-        return array[top--];
-    }
-
-    public int peek() {
-
-        if (isEmpty()) {
-            throw new RuntimeException("Stack is empty");
-        }
-        return array[top];
-    }
-
-    public boolean isFull() {
-
-        return top >= capacity;
-    }
-
-    public boolean isEmpty() {
-
-        return top == -1;
-    }
+    int size();
 }
