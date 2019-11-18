@@ -6,8 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
-class ArrayHashTableTest {
+public class ArrayHashTableTest {
 
     private ArrayHashTable hashTable;
     private User user;
@@ -22,7 +21,7 @@ class ArrayHashTableTest {
     public void shouldReturnValue_whenAccessViaKey() {
 
         hashTable.put("user", user);
-        User actual = hashTable.getValue("user");
+        User actual = hashTable.get("user");
         assertEquals(user, actual);
     }
 
@@ -33,5 +32,12 @@ class ArrayHashTableTest {
         hashTable.put("user", user);
 
         assertEquals(2, hashTable.size());
+    }
+
+    @Test
+    public void test_for_random_testing() {
+
+
+
     }
 }
