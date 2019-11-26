@@ -1,4 +1,4 @@
-package com.alek.designpatterns.observer.javaapi;
+package com.alek.designpattern.observer.javaapi;
 
 
 public class WeatherStation {

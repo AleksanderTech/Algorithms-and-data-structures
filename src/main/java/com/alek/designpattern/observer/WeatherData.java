@@ -1,4 +1,4 @@
-package com.alek.designpatterns.observer;
+package com.alek.designpattern.observer;
 
 import java.util.ArrayList;
 import java.util.List;

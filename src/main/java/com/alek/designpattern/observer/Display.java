@@ -1,4 +1,4 @@
-package com.alek.designpatterns.observer;
+package com.alek.designpattern.observer;
 
 public interface Display {
 

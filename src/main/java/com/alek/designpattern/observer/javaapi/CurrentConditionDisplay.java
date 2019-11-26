@@ -1,6 +1,6 @@
-package com.alek.designpatterns.observer.javaapi;
+package com.alek.designpattern.observer.javaapi;
 
-import com.alek.designpatterns.observer.Display;
+import com.alek.designpattern.observer.Display;
 
 import java.util.Observable;
 import java.util.Observer;
